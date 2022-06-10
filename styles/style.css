@@ -1,0 +1,191 @@
+
+    /*palette*/
+:root {
+    --azul: #14213d;
+    --naranja: rgba(255, 136, 0, 0.986);
+    --amarillo: #fca311;
+    --font-general: 'Plus Jakarta Sans', sans-serif;
+}
+    
+    /*Globales*/
+html {
+    box-sizing: border-box;
+    font-size: 62.5%
+}
+
+*, *:after, *:before {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: black;
+    font-family: var(--font-general)
+}
+
+h1, h2, p {
+    margin: 0;
+    padding: 2rem 0;
+}
+
+    /*reutilizables*/
+
+.contenedor {
+    margin: 0 auto;
+    max-width: 120rem;
+    width: 95%;
+    font-size: center;
+}
+
+.seccion {
+    margin-bottom: 3rem;
+}
+
+    /*Barra de navegacion*/
+
+.header {
+    background-color:var(--azul);
+    
+}
+
+header h1 {
+    font-size: 2rem;
+    color: var(--amarillo);
+}
+
+.barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.imagen-barra {
+    width: 6rem;
+    height: 6rem;
+    padding: .5rem;
+}
+
+h1 {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+/* - Caja - */
+
+.caja {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+    width: 100%;
+    background-color: var(--azul);
+    border: 1px solid #000000;
+}
+
+.caja:hover {
+    cursor: pointer;
+    border: 1px solid var(--naranja);
+    transition: 200ms ease-in-out;
+}
+
+
+
+
+.caja h3 {
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: var(--amarillo);
+}
+
+
+.logo-caja {
+    width: 6rem;
+    height: 6rem;
+    margin-right: 2rem;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 3rem;
+}
+
+.precio-caja {
+    font-weight: 500;
+    font-size: 2rem;
+    color: var(--amarillo)
+    
+}
+
+.left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+/* - Boton - */
+
+.zone-button {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.button {
+    display: inline-block;
+    padding: 2rem 2rem;
+    background-color: var(--light);
+    text-decoration: none;
+    text-align: center;
+    margin: 2rem 0;
+    width: 20rem;
+    border-radius: 5px;
+    background-color: var(--azul);
+    color: var(--amarillo);
+    
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.precio {
+    background-color: var(--naranja);
+    width: 20rem;
+    height: 5.7rem;
+    text-align: center;
+    align-items: center;
+    padding: 2rem 2rem;
+    border-radius: 5px;
+}
+
+
+@media (max-width: 641px) {
+    .caja {
+        flex-direction: column;
+    }
+    h3 {
+        text-align: center;
+    }
+
+    .zone-button {
+        flex-direction: column;
+    }
+    .button {
+        display: block;
+        margin: 0;
+        width: 100%;
+    }
+    .precio {
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+}
+
+.seleccionado {
+    cursor: pointer;
+    border: 1px solid var(--naranja);     
+}
